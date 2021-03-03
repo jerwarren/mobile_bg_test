@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div class="background-wrapper outer">
+            <div class="inner">
+                <video src="https://res.cloudinary.com/dqrn2obam/video/upload/w_500,ar_2:3,g_auto,c_fill/v1614799123/Holiday-Sizzle-Reel-Late-Winter_1_gw3hxa.webm" autoplay loop></video>
+            </div>
+        </div>
+
+        <script src="" async defer></script>
+        <style>
+            .background-wrapper {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                position: fixed;
+            }
+            .background-wrapper video {
+                height: 100vh;
+            }
+            body {
+                margin: 0;
+            }
+
+            .outer {
+                margin: 0 auto; 
+                overflow: visible;
+            }
+            .inner {
+                position:relative;
+                float: right; /* this was added and display removed */
+                right: 50%;
+            }
+            .inner video {
+                position: relative; 
+                right:-50%; /* this was changed from "left" in original */
+            }
+        </style>
+    </body>
+</html>
