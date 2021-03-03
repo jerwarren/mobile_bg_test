@@ -27,16 +27,27 @@
             </div>
         </div>
 
-        <script src="" async defer></script>
+        <script src="" async defer>
+            function resize(){
+                  // We execute the same script as before
+                  let vh = window.innerHeight * 0.01;
+                  document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+            window.addEventListener('resize', () => {
+                resize();
+            });
+        </script>
         <style>
             .background-wrapper {
                 width: 100vw;
-                height: 100vh;
+                height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+                height: calc(var(--vh, 1vh) * 100);
                 overflow: hidden;
                 position: fixed;
             }
             .background-wrapper video {
-                height: 100vh;
+                height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+                height: calc(var(--vh, 1vh) * 100);
             }
             body {
                 margin: 0;
